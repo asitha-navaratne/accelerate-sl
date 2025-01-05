@@ -13,6 +13,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import accelerateLogo from "../../assets/logo-accelerate.png";
 import repoIcon from "../../assets/icon-repo.svg";
 import downloadIcon from "../../assets/icon-download.svg";
 
@@ -22,8 +23,17 @@ import faqs from "@/constants/faqs";
 const HomePage = () => {
   return (
     <div className="w-full h-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center mb-10">
+        <h1 className="inline-block text-4xl md:text-5xl uppercase italic font-extrabold tracking-tighter -rotate-3 text-purple-200 text-shadow hover:scale-125 transition-all duration-300 ease-in-out">
+          mastering
+        </h1>
+        <h1 className="inline-block text-5xl md:text-6xl uppercase italic font-extrabold tracking-tighter -rotate-3 text-yellow-500 text-shadow hover:scale-125 transition-all duration-300 ease-in-out">
+          data science
+        </h1>
+        <img src={accelerateLogo} className="mt-4 w-1/2 md:w-1/5" />
+      </div>
       <div className="w-[70%] sm:w-1/2">
-        <h2 className="font-bold justify-self-center mb-5 hover:text-purple-500 transition-colors duration-300">
+        <h2 className="font-bold justify-self-center text-center mb-5 hover:text-purple-600 transition-colors duration-300">
           Browse our FAQs to answer your burning questions
         </h2>
         <Accordion type="single" collapsible className="w-full">
@@ -36,7 +46,7 @@ const HomePage = () => {
         </Accordion>
       </div>
       <div className="mt-10">
-        <h2 className="font-bold justify-self-center mb-5 hover:text-purple-500 transition-colors duration-300">
+        <h2 className="font-bold justify-self-center text-center mb-5 hover:text-purple-600 transition-colors duration-300">
           Or go through our repositories below
         </h2>
         <Carousel
