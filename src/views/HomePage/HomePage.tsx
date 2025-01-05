@@ -13,7 +13,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, ClipboardType, Download } from "lucide-react";
+import {
+  ChevronRight,
+  ClipboardType,
+  Download,
+  Facebook,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 import accelerateLogo from "../../assets/logo-accelerate.png";
 import gskLogo from "../../assets/logo-gsk.png";
@@ -24,6 +31,10 @@ import repos from "@/constants/repos";
 import faqs from "@/constants/faqs";
 
 const HomePage = () => {
+  const handleFooterLinkClick = function (url: string) {
+    window.location.href = url;
+  };
+
   return (
     <div className="w-full h-full flex flex-col items-center">
       <div className="w-full flex flex-col items-center mt-6 mb-10">
@@ -108,6 +119,46 @@ const HomePage = () => {
           </CarouselContent>
           <CarouselNext className="hidden sm:flex" />
         </Carousel>
+      </div>
+      <div className="mt-10 bg-slate-500 w-full h-20">
+        <div className="flex flex-col items-center">
+          <div className="mt-2">
+            <Button
+              variant="link"
+              size="icon"
+              onClick={() =>
+                handleFooterLinkClick(
+                  "https://www.instagram.com/globalshapers.kandy/"
+                )
+              }
+            >
+              <Instagram />
+            </Button>
+            <Button
+              variant="link"
+              size="icon"
+              onClick={() =>
+                handleFooterLinkClick(
+                  "https://www.facebook.com/GlobalshaperskandyHub"
+                )
+              }
+            >
+              <Facebook />
+            </Button>
+            <Button
+              variant="link"
+              size="icon"
+              onClick={() =>
+                handleFooterLinkClick(
+                  "https://www.linkedin.com/company/global-shapers-kandy/"
+                )
+              }
+            >
+              <Linkedin />
+            </Button>
+          </div>
+          <p className="text-sm">&#169; Global Shapers Kandy Hub 2024</p>
+        </div>
       </div>
     </div>
   );
