@@ -1,4 +1,4 @@
-const config = [
+const repos = [
   {
     name: "LiveCursors",
     description:
@@ -40,4 +40,4 @@ const config = [
   },
 ];
 
-export default config;
+export default repos;
