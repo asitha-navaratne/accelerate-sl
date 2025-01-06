@@ -37,7 +37,7 @@ const HomePage = () => {
 
   return (
     <div className="w-full h-full flex flex-col items-center">
-      <div className="w-full flex flex-col items-center mt-6 mb-10">
+      <div className="w-full flex flex-col items-center mt-16 mb-10">
         <h1 className="hero-text text-purple-100">mastering</h1>
         <h1 className="hero-text text-yellow-400">data science</h1>
         <img src={accelerateLogo} className="mt-4 w-1/2 md:w-1/5" />
