@@ -5,7 +5,7 @@ import HomePage from "./views/HomePage";
 function App() {
   return (
     <Routes>
-      <Route path="accelerate-sl/" element={<HomePage />} />
+      <Route path="/accelerate-sl/" element={<HomePage />} />
     </Routes>
   );
 }
