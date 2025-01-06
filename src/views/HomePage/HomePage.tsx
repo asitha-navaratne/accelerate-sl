@@ -75,18 +75,18 @@ const HomePage = () => {
           ))}
         </Accordion>
       </div>
-      <div className="mt-10">
+      <div className="mt-10 w-full">
         <h2 className="sub-heading">Or go through our repositories below 🧑‍💻</h2>
         <Carousel
           opts={{
             align: "start",
           }}
-          className="max-w-xl p-2"
+          className="max-w-xl p-2 md:justify-self-center"
         >
           <CarouselPrevious className="hidden sm:flex" />
           <CarouselContent>
             {repos.map((repo) => (
-              <CarouselItem key={repo.name} className="basis-1/3">
+              <CarouselItem key={repo.name} className="basis-1/2 md:basis-1/3">
                 <Card className="w-auto h-full bg-slate-800 border-slate-500">
                   <CardContent className="p-2 h-full">
                     <div className="flex flex-col h-full">
