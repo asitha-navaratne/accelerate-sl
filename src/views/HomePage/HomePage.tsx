@@ -68,7 +68,7 @@ const HomePage = () => {
         </h2>
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
-            <AccordionItem value={`item-${index}`}>
+            <AccordionItem value={`item-${index}`} key={faq.question}>
               <AccordionTrigger>{faq.question}</AccordionTrigger>
               <AccordionContent>{faq.answer}</AccordionContent>
             </AccordionItem>
@@ -100,7 +100,7 @@ const HomePage = () => {
                         <p className="text-sm text-white">{repo.description}</p>
                         <div className="flex items-center mt-3">
                           <div
-                            className={`rounded-full bg-${repo.color} w-3 h-3`}
+                            className={`rounded-full ${repo.color} w-3 h-3`}
                           ></div>
                           <p className="ml-2 text-white">{repo.language}</p>
                         </div>
