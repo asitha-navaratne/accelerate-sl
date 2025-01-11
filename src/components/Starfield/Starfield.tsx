@@ -46,7 +46,7 @@ const Starfield = () => {
           const stars = createStars(2000);
 
           const clear = () => {
-            context.fillStyle = "#010e1b";
+            context.fillStyle = "#000";
             context.fillRect(0, 0, canvas.width, canvas.height);
           };
 
@@ -107,8 +107,8 @@ const Starfield = () => {
           requestAnimationFrame(init);
 
           window.addEventListener("resize", function () {
-            width = window.innerWidth;
-            height = window.innerHeight;
+            width = document.body.offsetWidth;
+            height = document.body.offsetHeight;
             setCanvasExtents();
           });
         }
