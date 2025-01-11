@@ -66,7 +66,7 @@
 }
 @layer utilities {
   .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
   }
   .hero-text {
     @apply inline-block italic uppercase font-extrabold tracking-tighter text-5xl md:text-6xl -rotate-3 text-shadow hover:scale-125 transition-all duration-300 ease-in-out;
@@ -82,8 +82,8 @@
 body {
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(#fff, #d2a92b);
-  background-attachment: fixed;
+  color: #fff;
+  background-color: #010e1b;
 }
 
 #root {

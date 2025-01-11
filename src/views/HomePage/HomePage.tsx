@@ -27,6 +27,8 @@ import gskLogo from "../../assets/logo-gsk.png";
 import pyDataLogo from "../../assets/logo-pydata.png";
 import repoIcon from "../../assets/icon-repo.svg";
 
+import Starfield from "@/components/Starfield";
+
 import repos from "@/constants/repos";
 import faqs from "@/constants/faqs";
 
@@ -38,7 +40,7 @@ const HomePage = () => {
   return (
     <div className="w-full h-full flex flex-col items-center">
       <div className="w-full flex flex-col items-center mt-16 mb-10">
-        <h1 className="hero-text text-purple-100">mastering</h1>
+        <h1 className="hero-text text-blue-100">mastering</h1>
         <h1 className="hero-text text-yellow-400">data science</h1>
         <img src={accelerateLogo} className="mt-4 w-1/2 md:w-1/5" />
       </div>
@@ -160,6 +162,7 @@ const HomePage = () => {
           <p className="text-sm">&#169; Global Shapers Kandy Hub 2024</p>
         </div>
       </div>
+      <Starfield />
     </div>
   );
 };
