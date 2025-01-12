@@ -1,14 +1,38 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 
 import { TypewrittenTextProps } from "./TypewrittenText.types";
 
 const TypewrittenText: FC<TypewrittenTextProps> = (props) => {
+  const [isElementInView, setIsElementInView] = useState(false);
   const [text, setText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isCursorVisible, setIsCursorVisible] = useState(true);
 
+  const textElementRef = useRef<HTMLParagraphElement | null>(null);
+
   useEffect(() => {
-    if (currentIndex < props.text.length) {
+    const textElement = textElementRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsElementInView(entry.isIntersecting);
+      },
+      { threshold: 1.0 }
+    );
+
+    if (textElement) {
+      observer.observe(textElement);
+    }
+
+    return () => {
+      if (textElement) {
+        observer.unobserve(textElement);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isElementInView && currentIndex < props.text.length) {
       const timeout = setTimeout(() => {
         setText(
           (prev) => prev.replace("_", "") + props.text[currentIndex] + "_"
@@ -20,7 +44,7 @@ const TypewrittenText: FC<TypewrittenTextProps> = (props) => {
         clearTimeout(timeout);
       };
     }
-  }, [currentIndex, props.text]);
+  }, [currentIndex, isElementInView, props.text]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,7 +69,11 @@ const TypewrittenText: FC<TypewrittenTextProps> = (props) => {
     );
   }
 
-  return <p className={props.className}>&nbsp;{text}</p>;
+  return (
+    <p className={props.className} ref={textElementRef}>
+      &nbsp;{text}
+    </p>
+  );
 };
 
 export default TypewrittenText;

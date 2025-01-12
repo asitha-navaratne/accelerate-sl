@@ -36,14 +36,17 @@ const HomePage = () => {
           <h1 className="hero-text text-yellow-400">data science</h1>
           <img src={accelerateLogo} className="mt-4 w-1/2 md:w-1/5" />
         </div>
-        <div>
+        <div className="w-full flex flex-col items-center">
           <TypewrittenText
             text="In Partnership with:"
-            className="sub-heading"
+            className="sub-heading font-mono"
           />
           <div className="flex items-center mb-10">
-            <img src={gskLogo} className="hero-logos mr-5" />
-            <img src={pyDataLogo} className="hero-logos ml-5" />
+            <img src={gskLogo} className="hero-logos mr-5 hover:scale-150" />
+            <img
+              src={pyDataLogo}
+              className="hero-logos ml-5 hover:scale-[200%]"
+            />
           </div>
         </div>
         <div className="w-full flex flex-col items-center mt-10 mb-10">
@@ -52,7 +55,7 @@ const HomePage = () => {
           </h2>
           <Button
             variant="outline"
-            className="bg-purple-500 border-purple-900 text-purple-50 hover:bg-purple-600 hover:text-purple-50 transition-colors duration-300"
+            className="bg-yellow-300 border-yellow-600 text-black hover:bg-yellow-500 transition-colors duration-500 z-50"
           >
             <ClipboardType />
             Visit Form
@@ -73,9 +76,10 @@ const HomePage = () => {
           </Accordion>
         </div>
         <div className="mt-10 w-full">
-          <h2 className="sub-heading">
-            Or go through our repositories below 🧑‍💻
-          </h2>
+          <TypewrittenText
+            text="Or go through our repositories below:"
+            className="sub-heading font-mono"
+          />
           <Carousel
             opts={{
               align: "start",
