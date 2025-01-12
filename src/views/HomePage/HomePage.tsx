@@ -13,14 +13,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import {
-  ChevronRight,
-  ClipboardType,
-  Download,
-  Facebook,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+import { ChevronRight, ClipboardType, Download } from "lucide-react";
 import Starfield from "react-starfield";
 
 import accelerateLogo from "../../assets/logo-accelerate.png";
@@ -29,15 +22,12 @@ import pyDataLogo from "../../assets/logo-pydata.png";
 import repoIcon from "../../assets/icon-repo.svg";
 
 import TypewrittenText from "@/components/TypewrittenText";
+import Footer from "@/components/Footer";
 
 import repos from "@/constants/repos";
 import faqs from "@/constants/faqs";
 
 const HomePage = () => {
-  const handleFooterLinkClick = function (url: string) {
-    window.location.href = url;
-  };
-
   return (
     <>
       <div className="w-full h-full flex flex-col items-center">
@@ -90,7 +80,7 @@ const HomePage = () => {
             opts={{
               align: "start",
             }}
-            className="max-w-xl p-2 md:justify-self-center"
+            className="max-w-xl p-2 md:justify-self-center z-50"
           >
             <CarouselPrevious className="hidden sm:flex text-black" />
             <CarouselContent>
@@ -134,46 +124,7 @@ const HomePage = () => {
             <CarouselNext className="hidden sm:flex text-black" />
           </Carousel>
         </div>
-        <div className="mt-10 bg-slate-500 w-full h-20">
-          <div className="flex flex-col items-center">
-            <div className="mt-2">
-              <Button
-                variant="link"
-                size="icon"
-                onClick={() =>
-                  handleFooterLinkClick(
-                    "https://www.instagram.com/globalshapers.kandy/"
-                  )
-                }
-              >
-                <Instagram />
-              </Button>
-              <Button
-                variant="link"
-                size="icon"
-                onClick={() =>
-                  handleFooterLinkClick(
-                    "https://www.facebook.com/GlobalshaperskandyHub"
-                  )
-                }
-              >
-                <Facebook />
-              </Button>
-              <Button
-                variant="link"
-                size="icon"
-                onClick={() =>
-                  handleFooterLinkClick(
-                    "https://www.linkedin.com/company/global-shapers-kandy/"
-                  )
-                }
-              >
-                <Linkedin />
-              </Button>
-            </div>
-            <p className="text-sm">&#169; Global Shapers Kandy Hub 2024</p>
-          </div>
-        </div>
+        <Footer />
       </div>
       <Starfield />
     </>
