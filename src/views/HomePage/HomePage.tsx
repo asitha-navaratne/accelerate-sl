@@ -21,17 +21,17 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
+import Starfield from "react-starfield";
 
 import accelerateLogo from "../../assets/logo-accelerate.png";
 import gskLogo from "../../assets/logo-gsk.png";
 import pyDataLogo from "../../assets/logo-pydata.png";
 import repoIcon from "../../assets/icon-repo.svg";
 
-import Starfield from "@/components/Starfield";
+import TypewrittenText from "@/components/TypewrittenText";
 
 import repos from "@/constants/repos";
 import faqs from "@/constants/faqs";
-import TypewrittenText from "@/components/TypewrittenText";
 
 const HomePage = () => {
   const handleFooterLinkClick = function (url: string) {
