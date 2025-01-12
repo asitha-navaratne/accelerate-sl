@@ -7,7 +7,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="mt-10 bg-yellow-300 w-full h-20">
+    <footer className="mt-10 bg-yellow-700 w-full h-20">
       <div className="flex flex-col items-center">
         <div className="mt-2">
           <Button
