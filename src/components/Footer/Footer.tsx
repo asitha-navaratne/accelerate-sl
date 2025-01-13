@@ -19,7 +19,7 @@ const Footer = () => {
               )
             }
           >
-            <Instagram className="text-white" />
+            <Instagram className="text-white" aria-label="Instagram" />
           </Button>
           <Button
             variant="link"
@@ -30,7 +30,7 @@ const Footer = () => {
               )
             }
           >
-            <Facebook className="text-white" />
+            <Facebook className="text-white" aria-label="Facebook" />
           </Button>
           <Button
             variant="link"
@@ -41,7 +41,7 @@ const Footer = () => {
               )
             }
           >
-            <Linkedin className="text-white" />
+            <Linkedin className="text-white" aria-label="LinkedIn" />
           </Button>
         </div>
         <p className="text-sm">&#169; Global Shapers Kandy Hub 2024</p>

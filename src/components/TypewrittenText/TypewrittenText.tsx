@@ -70,9 +70,12 @@ const TypewrittenText: FC<TypewrittenTextProps> = (props) => {
   }
 
   return (
-    <p className={props.className} ref={textElementRef}>
-      &nbsp;{text}
-    </p>
+    <>
+      <p className="sr-only">{props.text}</p>
+      <p className={props.className} ref={textElementRef} aria-hidden="true">
+        &nbsp;{text}
+      </p>
+    </>
   );
 };
 

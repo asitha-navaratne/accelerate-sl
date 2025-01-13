@@ -18,6 +18,7 @@ const LogoRoulette = () => {
         animate={{ x: [0, 100, 0, -100, 0], scale: [0, 0.5, 1, 0.5, 0] }}
         transition={{ duration: 4, ease: "linear", repeat: Infinity }}
         className="w-10 mx-2 absolute z-50"
+        alt="Python logo"
       />
       <motion.img
         src={powerBiLogo}
@@ -29,6 +30,7 @@ const LogoRoulette = () => {
           repeat: Infinity,
         }}
         className="h-10 mx-2 absolute z-50"
+        alt="Power BI logo"
       />
       <motion.img
         src={javaScriptLogo}
@@ -40,6 +42,7 @@ const LogoRoulette = () => {
           repeat: Infinity,
         }}
         className="w-10 mx-2 absolute z-50"
+        alt="JavaScript logo"
       />
       <motion.img
         src={htmlLogo}
@@ -51,6 +54,7 @@ const LogoRoulette = () => {
           repeat: Infinity,
         }}
         className="w-10 mx-5 absolute z-50"
+        alt="HTML logo"
       />
       <motion.img
         src={cssLogo}
@@ -62,6 +66,7 @@ const LogoRoulette = () => {
           repeat: Infinity,
         }}
         className="w-10 mx-2 absolute z-50"
+        alt="CSS logo"
       />
       <motion.img
         src={githubLogo}
@@ -73,6 +78,7 @@ const LogoRoulette = () => {
           repeat: Infinity,
         }}
         className="w-10 ml-5 mx-2 absolute z-50"
+        alt="GitHub logo"
       />
       <motion.img
         src={gitLogo}
@@ -84,6 +90,7 @@ const LogoRoulette = () => {
           repeat: Infinity,
         }}
         className="w-10 ml-5 mx-2 absolute z-50"
+        alt="Git logo"
       />
     </div>
   );

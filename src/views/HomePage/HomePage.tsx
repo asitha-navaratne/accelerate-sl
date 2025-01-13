@@ -33,10 +33,19 @@ const HomePage = () => {
     <>
       <div className="w-full h-full flex flex-col items-center">
         <div className="w-full flex flex-col items-center mt-16 mb-10">
-          <h1 className="hero-text text-white">mastering</h1>
-          <h1 className="hero-text text-yellow-400">data science</h1>
+          <h1 className="sr-only">Mastering Data Science</h1>
+          <h1 className="hero-text text-white" aria-hidden="true">
+            mastering
+          </h1>
+          <h1 className="hero-text text-yellow-400" aria-hidden="true">
+            data science
+          </h1>
           <LogoRoulette />
-          <img src={accelerateLogo} className="mt-4 w-1/2 md:w-1/5" />
+          <img
+            src={accelerateLogo}
+            className="mt-4 w-64 md:w-1/5 hover:scale-125 hover:-rotate-6 transition-all duration-500"
+            alt="Accelerate Logo"
+          />
         </div>
         <div className="w-full flex flex-col items-center">
           <TypewrittenText
@@ -44,10 +53,15 @@ const HomePage = () => {
             className="sub-heading font-mono"
           />
           <div className="flex items-center mb-10">
-            <img src={gskLogo} className="hero-logos mr-8 hover:scale-150" />
+            <img
+              src={gskLogo}
+              className="hero-logos mr-8 hover:scale-150"
+              alt="Global Shapers Kandy Hub logo"
+            />
             <img
               src={pyDataLogo}
               className="hero-logos ml-8 hover:scale-[200%]"
+              alt="PyData Sri Lanka logo"
             />
           </div>
         </div>
@@ -57,7 +71,7 @@ const HomePage = () => {
           </h2>
           <Button
             variant="outline"
-            className="bg-yellow-300 border-yellow-600 text-black hover:bg-yellow-500 transition-colors duration-500 z-50"
+            className="bg-[#023047] border-blue-600 hover:bg-blue-900 hover:text-white transition-colors duration-500 z-50"
           >
             <ClipboardType />
             Visit Form
