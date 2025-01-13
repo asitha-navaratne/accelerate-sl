@@ -16,74 +16,74 @@ const LogoRoulette = () => {
       <motion.img
         src={pythonLogo}
         animate={{ x: [0, 100, 0, -100, 0], scale: [0, 0.5, 1, 0.5, 0] }}
-        transition={{ duration: 2, ease: "linear", repeat: Infinity }}
-        className="w-10 mx-2 absolute"
+        transition={{ duration: 4, ease: "linear", repeat: Infinity }}
+        className="w-10 mx-2 absolute z-50"
       />
       <motion.img
         src={powerBiLogo}
         animate={{ x: [0, 100, 0, -100, 0], scale: [0, 0.5, 1, 0.5, 0] }}
         transition={{
-          duration: 2,
+          duration: 4,
           ease: "linear",
-          delay: 0.25,
+          delay: 0.5,
           repeat: Infinity,
         }}
-        className="h-10 mx-2 absolute"
+        className="h-10 mx-2 absolute z-50"
       />
       <motion.img
         src={javaScriptLogo}
         animate={{ x: [0, 100, 0, -100, 0], scale: [0, 0.5, 1, 0.5, 0] }}
         transition={{
-          duration: 2,
+          duration: 4,
           ease: "linear",
-          delay: 0.5,
+          delay: 1,
           repeat: Infinity,
         }}
-        className="w-10 mx-2 absolute"
+        className="w-10 mx-2 absolute z-50"
       />
       <motion.img
         src={htmlLogo}
         animate={{ x: [0, 100, 0, -100, 0], scale: [0, 0.5, 1, 0.5, 0] }}
         transition={{
-          duration: 2,
+          duration: 4,
           ease: "linear",
-          delay: 0.75,
+          delay: 1.5,
           repeat: Infinity,
         }}
-        className="w-10 mx-5 absolute"
+        className="w-10 mx-5 absolute z-50"
       />
       <motion.img
         src={cssLogo}
         animate={{ x: [0, 100, 0, -100, 0], scale: [0, 0.5, 1, 0.5, 0] }}
         transition={{
-          duration: 2,
+          duration: 4,
           ease: "linear",
-          delay: 1,
+          delay: 2,
           repeat: Infinity,
         }}
-        className="w-10 mx-2 absolute"
+        className="w-10 mx-2 absolute z-50"
       />
       <motion.img
         src={githubLogo}
         animate={{ x: [0, 100, 0, -100, 0], scale: [0, 0.5, 1, 0.5, 0] }}
         transition={{
-          duration: 2,
+          duration: 4,
           ease: "linear",
-          delay: 1.25,
+          delay: 2.5,
           repeat: Infinity,
         }}
-        className="w-10 ml-5 mx-2 absolute"
+        className="w-10 ml-5 mx-2 absolute z-50"
       />
       <motion.img
         src={gitLogo}
         animate={{ x: [0, 100, 0, -100, 0], scale: [0, 0.5, 1, 0.5, 0] }}
         transition={{
-          duration: 2,
+          duration: 4,
           ease: "linear",
-          delay: 1.5,
+          delay: 3,
           repeat: Infinity,
         }}
-        className="w-10 ml-5 mx-2 absolute"
+        className="w-10 ml-5 mx-2 absolute z-50"
       />
     </div>
   );
