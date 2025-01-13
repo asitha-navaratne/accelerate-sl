@@ -3,11 +3,11 @@ import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const handleFooterLinkClick = function (url: string) {
-    window.location.href = url;
+    window.open(url, "_blank");
   };
 
   return (
-    <footer className="mt-10 bg-blue-950 w-full h-20">
+    <footer className="mt-10 bg-[#023047] w-full h-20">
       <div className="flex flex-col items-center">
         <div className="mt-2">
           <Button

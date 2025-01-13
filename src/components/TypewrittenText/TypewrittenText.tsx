@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, memo, useEffect, useRef, useState } from "react";
 
 import { TypewrittenTextProps } from "./TypewrittenText.types";
 
@@ -76,4 +76,4 @@ const TypewrittenText: FC<TypewrittenTextProps> = (props) => {
   );
 };
 
-export default TypewrittenText;
+export default memo(TypewrittenText);

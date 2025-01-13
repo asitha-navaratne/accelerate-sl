@@ -44,10 +44,10 @@ const HomePage = () => {
             className="sub-heading font-mono"
           />
           <div className="flex items-center mb-10">
-            <img src={gskLogo} className="hero-logos mr-5 hover:scale-150" />
+            <img src={gskLogo} className="hero-logos mr-8 hover:scale-150" />
             <img
               src={pyDataLogo}
-              className="hero-logos ml-5 hover:scale-[200%]"
+              className="hero-logos ml-8 hover:scale-[200%]"
             />
           </div>
         </div>
