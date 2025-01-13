@@ -21,6 +21,7 @@ import gskLogo from "../../assets/logo-gsk.png";
 import pyDataLogo from "../../assets/logo-pydata.png";
 import repoIcon from "../../assets/icon-repo.svg";
 
+import LogoRoulette from "@/components/LogoRoulette";
 import TypewrittenText from "@/components/TypewrittenText";
 import Footer from "@/components/Footer";
 
@@ -34,6 +35,7 @@ const HomePage = () => {
         <div className="w-full flex flex-col items-center mt-16 mb-10">
           <h1 className="hero-text text-white">mastering</h1>
           <h1 className="hero-text text-yellow-400">data science</h1>
+          <LogoRoulette />
           <img src={accelerateLogo} className="mt-4 w-1/2 md:w-1/5" />
         </div>
         <div className="w-full flex flex-col items-center">

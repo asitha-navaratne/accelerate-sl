@@ -7,7 +7,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="mt-10 bg-yellow-700 w-full h-20">
+    <footer className="mt-10 bg-blue-950 w-full h-20">
       <div className="flex flex-col items-center">
         <div className="mt-2">
           <Button
@@ -19,7 +19,7 @@ const Footer = () => {
               )
             }
           >
-            <Instagram />
+            <Instagram className="text-white" />
           </Button>
           <Button
             variant="link"
@@ -30,7 +30,7 @@ const Footer = () => {
               )
             }
           >
-            <Facebook />
+            <Facebook className="text-white" />
           </Button>
           <Button
             variant="link"
@@ -41,12 +41,10 @@ const Footer = () => {
               )
             }
           >
-            <Linkedin />
+            <Linkedin className="text-white" />
           </Button>
         </div>
-        <p className="text-sm text-black">
-          &#169; Global Shapers Kandy Hub 2024
-        </p>
+        <p className="text-sm">&#169; Global Shapers Kandy Hub 2024</p>
       </div>
     </footer>
   );
