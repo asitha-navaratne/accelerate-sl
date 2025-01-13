@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -17,6 +19,7 @@ import { ChevronRight, ClipboardType, Download } from "lucide-react";
 import Starfield from "react-starfield";
 
 import accelerateLogo from "../../assets/logo-accelerate.png";
+import accelerateLogoLow from "../../assets/logo-accelerate-low.png";
 import gskLogo from "../../assets/logo-gsk.png";
 import pyDataLogo from "../../assets/logo-pydata.png";
 import repoIcon from "../../assets/icon-repo.svg";
@@ -29,6 +32,16 @@ import repos from "@/constants/repos";
 import faqs from "@/constants/faqs";
 
 const HomePage = () => {
+  const [isLogoLoaded, setIsLogoLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setIsLogoLoaded(true);
+    };
+    img.src = accelerateLogo;
+  }, []);
+
   return (
     <>
       <div className="w-full h-full flex flex-col items-center">
@@ -41,11 +54,20 @@ const HomePage = () => {
             data science
           </h1>
           <LogoRoulette />
-          <img
-            src={accelerateLogo}
-            className="mt-4 w-64 md:w-1/5 hover:scale-125 hover:-rotate-6 transition-all duration-500"
-            alt="Accelerate Logo"
-          />
+          {isLogoLoaded && (
+            <img
+              src={accelerateLogo}
+              className="mt-4 w-64 md:w-1/5 hover:scale-125 hover:-rotate-6 transition-all duration-500"
+              alt="Accelerate Logo"
+            />
+          )}
+          {!isLogoLoaded && (
+            <img
+              src={accelerateLogoLow}
+              className="mt-4 w-64 md:w-1/5 hover:scale-125 hover:-rotate-6 transition-all duration-500"
+              alt="Accelerate Logo"
+            />
+          )}
         </div>
         <div className="w-full flex flex-col items-center">
           <TypewrittenText
