@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: "How do I register? 📝",
-    answer: "Fill in the form below",
+    answer: "Fill in the form above",
   },
 ];
 

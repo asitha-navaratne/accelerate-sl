@@ -77,6 +77,9 @@
   .hero-logos {
     @apply w-24 transition-all duration-300 ease-in-out;
   }
+  .action-button {
+    @apply bg-[#023047] border-blue-600 transition-colors duration-500 z-50;
+  }
 }
 
 body {

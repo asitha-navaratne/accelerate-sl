@@ -1,80 +1,27 @@
-import { useEffect, useState } from "react";
-
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, ClipboardType, Download } from "lucide-react";
+import { ChevronRight, ClipboardType, Info } from "lucide-react";
 import Starfield from "react-starfield";
 
-import accelerateLogo from "../../assets/logo-accelerate.png";
-import accelerateLogoLow from "../../assets/logo-accelerate-low.png";
 import gskLogo from "../../assets/logo-gsk.png";
 import pyDataLogo from "../../assets/logo-pydata.png";
-import repoIcon from "../../assets/icon-repo.svg";
 
-import LogoRoulette from "@/components/LogoRoulette";
+import HeadingSection from "@/components/HeadingSection";
+import FaqSection from "@/components/FaqSection";
+import CarouselSection from "@/components/CarouselSection/CarouselSection";
 import TypewrittenText from "@/components/TypewrittenText";
 import Footer from "@/components/Footer";
 
-import repos from "@/constants/repos";
-import faqs from "@/constants/faqs";
-
 const HomePage = () => {
-  const [isLogoLoaded, setIsLogoLoaded] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.onload = () => {
-      setIsLogoLoaded(true);
-    };
-    img.src = accelerateLogo;
-  }, []);
-
   return (
     <>
       <div className="w-full h-full flex flex-col items-center">
-        <div className="w-full flex flex-col items-center mt-16 mb-10">
-          <h1 className="sr-only">Mastering Data Science</h1>
-          <h1 className="hero-text text-white" aria-hidden="true">
-            mastering
-          </h1>
-          <h1 className="hero-text text-yellow-400" aria-hidden="true">
-            data science
-          </h1>
-          <LogoRoulette />
-          {isLogoLoaded && (
-            <img
-              src={accelerateLogo}
-              className="mt-4 w-64 md:w-1/5 hover:scale-125 hover:-rotate-6 transition-all duration-500"
-              alt="Accelerate Logo"
-            />
-          )}
-          {!isLogoLoaded && (
-            <img
-              src={accelerateLogoLow}
-              className="mt-4 w-64 md:w-1/5 hover:scale-125 hover:-rotate-6 transition-all duration-500"
-              alt="Accelerate Logo"
-            />
-          )}
-        </div>
+        <HeadingSection />
         <div className="w-full flex flex-col items-center">
           <TypewrittenText
             text="In Partnership with:"
             className="sub-heading font-mono"
           />
-          <div className="flex items-center mb-10">
+          <div className="flex items-center mb-2">
             <img
               src={gskLogo}
               className="hero-logos mr-8 hover:scale-150"
@@ -87,85 +34,26 @@ const HomePage = () => {
             />
           </div>
         </div>
-        <div className="w-full flex flex-col items-center mt-10 mb-10">
-          <h2 className="sub-heading">
-            Have a look at the form below to register! 👀
-          </h2>
+        <div className="w-full flex justify-center mt-10 mb-10 mx-auto">
           <Button
             variant="outline"
-            className="bg-[#023047] border-blue-600 hover:bg-blue-900 hover:text-white transition-colors duration-500 z-50"
+            className="action-button hover:bg-blue-900 hover:text-white mr-2 sm:mr-5"
+          >
+            <Info />
+            Learn More
+            <ChevronRight className="hidden sm:block" />
+          </Button>
+          <Button
+            variant="outline"
+            className="action-button hover:bg-blue-900 hover:text-white ml-2 sm:ml-5"
           >
             <ClipboardType />
-            Visit Form
-            <ChevronRight />
+            Register Now
+            <ChevronRight className="hidden sm:block" />
           </Button>
         </div>
-        <div className="w-[70%] sm:w-1/2">
-          <h2 className="sub-heading">
-            Browse our FAQs to answer your burning questions! 🙋‍♂️
-          </h2>
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem value={`item-${index}`} key={faq.question}>
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-        <div className="mt-10 w-full">
-          <TypewrittenText
-            text="Or go through our repositories below:"
-            className="sub-heading font-mono"
-          />
-          <Carousel
-            opts={{
-              align: "start",
-            }}
-            className="max-w-xl p-2 md:justify-self-center z-50"
-          >
-            <CarouselPrevious className="hidden sm:flex text-black" />
-            <CarouselContent>
-              {repos.map((repo) => (
-                <CarouselItem
-                  key={repo.name}
-                  className="basis-1/2 md:basis-1/3"
-                >
-                  <Card className="w-auto h-full bg-slate-800 border-slate-500">
-                    <CardContent className="p-2 h-full">
-                      <div className="flex flex-col h-full">
-                        <div className="flex h-1/3 items-center">
-                          <img src={repoIcon} className="w-1/6 mr-3" />
-                          <h2 className="font-semibold text-blue-400">
-                            {repo.name}
-                          </h2>
-                        </div>
-                        <div className="mt-2 h-1/3">
-                          <p className="text-sm text-white">
-                            {repo.description}
-                          </p>
-                          <div className="flex items-center mt-3">
-                            <div
-                              className={`rounded-full ${repo.color} w-3 h-3`}
-                            ></div>
-                            <p className="ml-2 text-white">{repo.language}</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center h-1/3 mt-14 justify-self-end">
-                          <Download className="w-1/6 mr-2 text-white" />
-                          <a href={repo.link} className="text-sm text-white">
-                            Download .zip file
-                          </a>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselNext className="hidden sm:flex text-black" />
-          </Carousel>
-        </div>
+        <FaqSection />
+        <CarouselSection />
         <Footer />
       </div>
       <Starfield />
