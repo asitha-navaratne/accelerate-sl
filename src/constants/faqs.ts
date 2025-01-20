@@ -1,15 +1,21 @@
 const faqs = [
   {
-    question: "When will the session be held? 📆",
-    answer: "After the 15th of January",
+    question: "What topics will be covered? 💡",
+    answer:
+      "Topics include Python programming, PowerBI, Java programming, Web development and Git",
   },
   {
-    question: "What topics will be covered? 💡",
-    answer: "Python programming, Java programming, Web development, PowerBI",
+    question: "When will the session be held? 📆",
+    answer: "The sessions will be held every weekend on Zoom",
+  },
+  {
+    question: "How much are the fees? 💵",
+    answer:
+      "Fees for one course (which include multiple topics e.g. Python, PowerBI and Git) will be Rs. 2500",
   },
   {
     question: "How do I register? 📝",
-    answer: "Fill in the form above",
+    answer: "Fill in the form above!",
   },
 ];
 

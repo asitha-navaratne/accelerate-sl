@@ -1,41 +1,41 @@
 const repos = [
   {
-    name: "LiveCursors",
+    name: "Python Programming",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Ipsam voluptatum totam sit?",
-    language: "JavaScript",
-    color: "bg-yellow-400",
+      "Learn Python from variables and conditionals to data visualization using Numpy, Matplotlib and Dash.",
+    languages: "Python",
+    colors: "bg-cyan-700",
     link: "https://github.com/asitha-navaratne/accelerate-sl/archive/refs/heads/main.zip",
   },
   {
-    name: "External-interrupts",
+    name: "Microsoft PowerBI",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Ipsam totam sit?",
-    language: "Python",
-    color: "bg-cyan-700",
+      "Master PowerBI, starting from the fundamentals to data visualization in dashboards.",
+    languages: "PowerBI",
+    colors: "bg-yellow-500",
     link: "https://github.com/asitha-navaratne/accelerate-sl/archive/refs/heads/main.zip",
   },
   {
-    name: "Global-Movie-Database",
-    description: "Lorem ipsum dolor sit?",
-    language: "Java",
-    color: "bg-orange-400",
+    name: "VCS Using Git",
+    description:
+      "Learn about version control using the most popular VCS tool Git.",
+    languages: "Git",
+    colors: "bg-red-500",
     link: "https://github.com/asitha-navaratne/accelerate-sl/archive/refs/heads/main.zip",
   },
   {
-    name: "Calendare",
+    name: "Java Programming",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Ipsam voluptatum totam sit?",
-    language: "CSS",
-    color: "bg-purple-400",
+      "Learn the hyper-popular Java programming language, including key concepts such as OOP and write programs that run anywhere!",
+    languages: "Java",
+    colors: "bg-orange-400",
     link: "https://github.com/asitha-navaratne/accelerate-sl/archive/refs/heads/main.zip",
   },
   {
-    name: "LCD-8bit-custom-char",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Ipsam voluptatum totam sit?",
-    language: "Java",
-    color: "bg-orange-400",
+    name: "Web Development",
+    description: "Master the foundations of the 3 languages of the web.",
+    languages: ["HTML", "CSS", "JavaScript"],
+    colors: ["bg-orange-600", "bg-purple-500", "bg-yellow-300"],
     link: "https://github.com/asitha-navaratne/accelerate-sl/archive/refs/heads/main.zip",
   },
 ];
