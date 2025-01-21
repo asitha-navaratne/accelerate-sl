@@ -1,20 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ClipboardType, Info } from "lucide-react";
-import Starfield from "react-starfield";
+import { useNavigate } from "react-router";
+// import Starfield from "react-starfield";
 
 import gskLogo from "../../assets/logo-gsk.png";
 import pyDataLogo from "../../assets/logo-pydata.png";
 
 import HeadingSection from "@/components/HeadingSection";
 import FaqSection from "@/components/FaqSection";
-import CarouselSection from "@/components/CarouselSection/CarouselSection";
+import CarouselSection from "@/components/CarouselSection";
 import TypewrittenText from "@/components/TypewrittenText";
 import Footer from "@/components/Footer";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleLearnMoreButtonClick = function () {
+    navigate("about");
+  };
+
   return (
     <>
-      <div className="w-full h-full flex flex-col items-center">
+      <div className="w-full h-full flex flex-col items-center overflow-x-hidden">
         <HeadingSection />
         <div className="w-full flex flex-col items-center">
           <TypewrittenText
@@ -38,6 +45,7 @@ const HomePage = () => {
           <Button
             variant="outline"
             className="action-button hover:bg-blue-900 hover:text-white mr-2 sm:mr-5"
+            onClick={handleLearnMoreButtonClick}
           >
             <Info />
             Learn More
@@ -56,7 +64,7 @@ const HomePage = () => {
         <CarouselSection />
         <Footer />
       </div>
-      <Starfield />
+      {/* <Starfield /> */}
     </>
   );
 };

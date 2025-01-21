@@ -69,13 +69,16 @@
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
   }
   .hero-text {
-    @apply inline-block italic uppercase font-extrabold tracking-tighter text-5xl md:text-6xl -rotate-3 text-shadow hover:scale-125 transition-all duration-300 ease-in-out;
+    @apply inline-block italic uppercase font-extrabold tracking-tighter text-5xl md:text-6xl -rotate-3 text-shadow hover:scale-125 transition-transform duration-300 ease-in-out;
   }
   .sub-heading {
     @apply font-bold justify-self-center text-center mb-7 hover:text-purple-300 transition-colors duration-300;
   }
+  .accelerate-logo {
+    @apply mt-10 w-64 md:w-1/5 hover:scale-125 hover:-rotate-6 transition-transform duration-500;
+  }
   .hero-logos {
-    @apply w-24 transition-all duration-300 ease-in-out;
+    @apply w-24 transition-transform duration-300 ease-in-out;
   }
   .action-button {
     @apply bg-[#023047] border-blue-600 transition-colors duration-500 z-50;

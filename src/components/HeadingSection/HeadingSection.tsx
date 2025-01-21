@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import accelerateLogo from "../../assets/logo-accelerate.png";
 import accelerateLogoLow from "../../assets/logo-accelerate-low.png";
 
-import LogoRoulette from "../LogoRoulette";
-
 const HeadingSection = () => {
   const [isLogoLoaded, setIsLogoLoaded] = useState(false);
 
@@ -25,18 +23,17 @@ const HeadingSection = () => {
       <h1 className="hero-text text-yellow-400" aria-hidden="true">
         data science
       </h1>
-      <LogoRoulette />
       {isLogoLoaded && (
         <img
           src={accelerateLogo}
-          className="mt-4 w-64 md:w-1/5 hover:scale-125 hover:-rotate-6 transition-all duration-500"
+          className="accelerate-logo"
           alt="Accelerate Logo"
         />
       )}
       {!isLogoLoaded && (
         <img
           src={accelerateLogoLow}
-          className="w-64 md:w-1/5 hover:scale-125 hover:-rotate-6 transition-all duration-500"
+          className="accelerate-logo"
           alt="Accelerate Logo"
         />
       )}

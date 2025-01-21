@@ -19,7 +19,7 @@ const CarouselSection = () => {
     <div className="mt-10 w-full">
       <TypewrittenText
         text="Browse our course repositories below for starting files:"
-        className="sub-heading font-mono"
+        className="sub-heading font-mono px-10"
       />
       <Carousel
         opts={{
