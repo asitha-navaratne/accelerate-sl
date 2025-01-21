@@ -41,8 +41,8 @@ const AboutData: AboutDataType = {
     description:
       "Bridging academia and industry through Python and data analytics initiatives.",
     content: {
-      p1: "Pydata Sri Lanka is an initiative that is backed by Pydata, one of the main forums that drives the new development of the python programming language.",
-      p2: "Pydata Sri Lanka was initiated to bridge the technology gap between academia and the industry. The forum has undertaken numerous workshops in python programming and data analytics for over 1000 participants. There latest initiative includes UniConnect which is a program to teach python to undergraduates across Sri Lanka.",
+      p1: "PyData Sri Lanka is an initiative that is backed by PyData, one of the main forums that drives the new development of the Python programming language.",
+      p2: "PyData Sri Lanka was initiated to bridge the technology gap between academia and the industry. The forum has undertaken numerous workshops in Python programming and data analytics for over 1000 participants. Their latest initiative includes UniConnect, a program to teach Python to undergraduates across Sri Lanka.",
     },
     links: {
       meetup: {
