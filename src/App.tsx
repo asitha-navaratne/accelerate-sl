@@ -6,7 +6,7 @@ import AboutPage from "./views/AboutPage";
 function App() {
   return (
     <Routes>
-      <Route path="/accelerate-sl">
+      <Route path="/">
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
       </Route>
