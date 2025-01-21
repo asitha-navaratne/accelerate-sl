@@ -1,4 +1,4 @@
-const repos = [
+const Repos = [
   {
     name: "Python Programming",
     description:
@@ -40,4 +40,4 @@ const repos = [
   },
 ];
 
-export default repos;
+export default Repos;

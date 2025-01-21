@@ -1,6 +1,6 @@
-const faqs = [
+const Faqs = [
   {
-    question: "What topics will be covered? 💡",
+    question: "What technologies will be covered? 💡",
     answer:
       "Topics include Python programming, PowerBI, Java programming, Web development and Git",
   },
@@ -19,4 +19,4 @@ const faqs = [
   },
 ];
 
-export default faqs;
+export default Faqs;

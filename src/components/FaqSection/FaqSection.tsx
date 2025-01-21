@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import faqs from "@/constants/faqs";
+import Faqs from "@/constants/Faqs";
 
 const FaqSection = () => {
   return (
@@ -14,7 +14,7 @@ const FaqSection = () => {
         Check out the following FAQs to answer your burning questions! 🙋‍♂️
       </h2>
       <Accordion type="single" collapsible className="w-full">
-        {faqs.map((faq, index) => (
+        {Faqs.map((faq, index) => (
           <AccordionItem value={`item-${index}`} key={faq.question}>
             <AccordionTrigger>{faq.question}</AccordionTrigger>
             <AccordionContent>{faq.answer}</AccordionContent>

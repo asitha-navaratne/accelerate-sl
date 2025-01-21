@@ -12,7 +12,7 @@ import repoIcon from "../../assets/icon-repo.svg";
 
 import TypewrittenText from "../TypewrittenText";
 
-import repos from "@/constants/repos";
+import Repos from "@/constants/Repos";
 
 const CarouselSection = () => {
   return (
@@ -29,9 +29,12 @@ const CarouselSection = () => {
       >
         <CarouselPrevious className="hidden sm:flex text-black" />
         <CarouselContent>
-          {repos.map((repo) => (
+          {Repos.map((repo) => (
             <CarouselItem key={repo.name} className="basis-1/2 md:basis-1/3">
-              <Card className="w-auto h-full bg-slate-800 border-slate-500">
+              <Card
+                className="w-auto h-full bg-slate-800 border-slate-500"
+                aria-label={repo.name}
+              >
                 <CardContent className="p-2 h-full">
                   <div className="flex flex-col h-full">
                     <div className="flex h-1/3 items-center">
