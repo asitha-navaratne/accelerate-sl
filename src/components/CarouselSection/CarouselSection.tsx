@@ -12,7 +12,7 @@ import repoIcon from "../../assets/icon-repo.svg";
 
 import TypewrittenText from "../TypewrittenText";
 
-import Repos from "@/constants/Repos";
+import Repos from "../../constants/Repos";
 
 const CarouselSection = () => {
   return (
