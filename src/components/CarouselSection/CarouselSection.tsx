@@ -68,11 +68,21 @@ const CarouselSection = () => {
                         </div>
                       )}
                     </div>
-                    <div className="flex items-center h-1/3 mt-14 justify-self-end">
-                      <Download className="w-1/6 mr-2 text-white" />
-                      <a href={repo.link} className="text-sm text-white">
-                        Download .zip file
-                      </a>
+                    <div className="flex items-center h-1/3 mt-16 justify-self-end">
+                      {repo.link === "Coming Soon!" ? (
+                        <p className="text-yellow-300 font-light">
+                          {repo.link}
+                        </p>
+                      ) : (
+                        <a
+                          href={repo.link}
+                          target="_blank"
+                          className="text-sm text-white flex items-center"
+                        >
+                          <Download className="mr-2 text-white" />
+                          Download Content
+                        </a>
+                      )}
                     </div>
                   </div>
                 </CardContent>

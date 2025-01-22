@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ClipboardType, Info } from "lucide-react";
 import { useNavigate } from "react-router";
+import { motion } from "motion/react";
 
 import gskLogo from "../../assets/images/logo-gsk.png";
 import pyDataLogo from "../../assets/images/logo-pydata.png";
@@ -43,6 +44,23 @@ const HomePage = () => {
               alt="PyData Sri Lanka logo"
             />
           </div>
+        </div>
+        <div className="my-10 text-center">
+          <motion.p
+            className="font-semibold"
+            animate={{ color: ["#facc15", "#ffeea8"] }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatType: "mirror",
+            }}
+          >
+            Course Registration Only LKR 2500!
+          </motion.p>
+          <p className="mt-4 font-light">
+            Registrations open from 23rd January to 15th February.
+          </p>
+          <p className="mt-4 font-light">Courses begin on 23rd February.</p>
         </div>
         <div className="w-full flex justify-center mt-10 mb-10 mx-auto">
           <Button
