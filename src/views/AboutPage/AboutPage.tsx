@@ -23,6 +23,8 @@ import benefits1 from "../../assets/images/benefits-1.svg";
 import benefits2 from "../../assets/images/benefits-2.svg";
 import benefits3 from "../../assets/images/benefits-3.svg";
 
+import prospectusDoc from "../../assets/docs/ASL Prospectus.pdf";
+
 import AboutDialog from "@/components/AboutDialog";
 import TypewrittenText from "@/components/TypewrittenText";
 import Footer from "@/components/Footer";
@@ -53,6 +55,10 @@ const AboutPage = () => {
   ) {
     setSelectedData(selectedData);
     setIsDialogOpen(true);
+  };
+
+  const handleDownloadProspectusButtonClick = function () {
+    window.open(prospectusDoc);
   };
 
   return (
@@ -197,12 +203,22 @@ const AboutPage = () => {
             </Card>
           </motion.div>
         </div>
+        <div className="my-20 flex justify-center">
+          <Button
+            variant="outline"
+            className="action-button hover:bg-blue-900 hover:text-white"
+            onClick={handleDownloadProspectusButtonClick}
+          >
+            <Info />
+            View Prospectus
+          </Button>
+        </div>
         <div className="mt-14 md:mt-20 flex flex-col items-center px-5">
           <TypewrittenText
             text="Program Features"
             className="text-2xl sub-heading font-mono"
           />
-          <div className="md:mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
+          <div className="md:mt-2 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
             <img src={features1} className="w-20 mr-8" />
             <div className="self-start">
               <h3 className="text-lg font-thin mb-2 text-yellow-300">
@@ -251,12 +267,12 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-        <div className="mt-14 md:mt-10 flex flex-col items-center px-5">
+        <div className="my-14 flex flex-col items-center px-5">
           <TypewrittenText
             text="Benefits"
             className="text-2xl sub-heading font-mono"
           />
-          <div className="md:mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
+          <div className="md:mt-2 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
             <img src={benefits1} className="w-20 mr-8" />
             <div className="self-start">
               <h3 className="text-lg font-thin mb-2 text-yellow-300">
@@ -294,16 +310,6 @@ const AboutPage = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="mt-16 mb-20 flex justify-center">
-          <Button
-            variant="outline"
-            className="action-button hover:bg-blue-900 hover:text-white"
-            onClick={() => {}}
-          >
-            <Info />
-            Download Prospectus
-          </Button>
         </div>
         <Footer />
       </div>
