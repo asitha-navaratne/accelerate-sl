@@ -21,7 +21,7 @@ const HeadingSection = () => {
         mastering
       </h1>
       <h1 className="hero-text text-yellow-400" aria-hidden="true">
-        data science
+        data analytics
       </h1>
       {isLogoLoaded && (
         <img
