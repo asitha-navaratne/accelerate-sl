@@ -1,6 +1,6 @@
 import pythonContent from "../assets/docs/Python Course Content.pdf";
 import powerBiContent from "../assets/docs/Power BI Content.pdf";
-import gitContent from "../assets/docs/GIT content.pdf";
+import gitContent from "../assets/docs/GIT Content.pdf";
 
 const Repos = [
   {
