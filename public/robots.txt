@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asitha-navaratne.github.io/sitemap.xml
