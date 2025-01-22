@@ -54,7 +54,7 @@ const AboutCards = () => {
           className="z-20"
         >
           <Card
-            className="w-64 h-80 cursor-pointer bg-slate-800 border-slate-500 box-shadow"
+            className="w-64 h-80 cursor-pointer bg-slate-800 border-slate-500 box-shadow pb-5"
             onClick={() => handleCardClick("accelerate")}
           >
             <CardHeader className="items-center">
@@ -98,7 +98,7 @@ const AboutCards = () => {
           className="z-20"
         >
           <Card
-            className="w-64 h-80 cursor-pointer bg-slate-800 border-slate-500 box-shadow"
+            className="w-64 h-80 cursor-pointer bg-slate-800 border-slate-500 box-shadow pb-5"
             onClick={() => handleCardClick("gsk")}
           >
             <CardHeader className="items-center">
@@ -142,7 +142,7 @@ const AboutCards = () => {
           className="z-20"
         >
           <Card
-            className="w-64 h-80 cursor-pointer bg-slate-800 border-slate-500 box-shadow"
+            className="w-64 h-80 cursor-pointer bg-slate-800 border-slate-500 box-shadow pb-5"
             onClick={() => handleCardClick("pydata")}
           >
             <CardHeader className="items-center">
