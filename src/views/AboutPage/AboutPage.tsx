@@ -16,8 +16,14 @@ import { ChevronLeft } from "lucide-react";
 import accelerateLogo from "../../assets/logo-accelerate.png";
 import gskLogo from "../../assets/logo-gsk.png";
 import pyDataLogo from "../../assets/logo-pydata.png";
+import features1 from "../../assets/features-1.svg";
+import features2 from "../../assets/features-2.svg";
+import features3 from "../../assets/features-3.svg";
+import features4 from "../../assets/features-4.svg";
 
 import AboutDialog from "@/components/AboutDialog";
+import TypewrittenText from "@/components/TypewrittenText";
+import Footer from "@/components/Footer";
 
 const AboutPage = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -49,8 +55,8 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="px-5">
-        <div className="flex justify-between mt-3 items-center">
+      <div>
+        <div className="flex justify-between mt-3 items-center px-5">
           <Button onClick={handleBackButtonClick} aria-label="back button">
             <ChevronLeft />
             Back
@@ -61,7 +67,7 @@ const AboutPage = () => {
             alt="Accelerate Logo"
           />
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 mt-10 md:mt-24">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 mt-10 md:mt-24 px-5">
           <motion.div
             onHoverStart={() => {
               accelerateLogoControls.start({ scale: 1.2, rotate: -10 });
@@ -189,6 +195,63 @@ const AboutPage = () => {
             </Card>
           </motion.div>
         </div>
+        <div className="mt-14 md:mt-20 flex flex-col justify-center pb-8 px-5">
+          <TypewrittenText
+            text="Program Features"
+            className="text-2xl sub-heading font-mono"
+          />
+          <div className="flex flex-col items-center">
+            <div className="md:mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5">
+              <img src={features1} className="w-20 mr-8" />
+              <div className="self-start">
+                <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                  Flexible Online Format
+                </h3>
+                <p>
+                  Participate from anywhere with sessions designed to fit your
+                  schedule, particularly on weekends.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5">
+              <img src={features2} className="w-20 mr-8" />
+              <div className="self-start">
+                <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                  Affordable Access
+                </h3>
+                <p>
+                  Affordably priced to ensure inclusivity while maintaining
+                  exceptional quality.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5">
+              <img src={features3} className="w-20 mr-8" />
+              <div className="self-start">
+                <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                  Comprehensive Curriculum:
+                </h3>
+                <p>
+                  Covering high-demand topics such as programming, data
+                  analytics, and tools for digital optimization.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5">
+              <img src={features4} className="w-20 mr-8" />
+              <div className="self-start">
+                <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                  Expert Panel:
+                </h3>
+                <p>
+                  Sessions conducted by industry professionals and experts from
+                  the Global Shapers community & beyond.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer />
       </div>
       <AboutDialog
         isOpen={isDialogOpen}
