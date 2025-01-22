@@ -51,6 +51,7 @@ const AboutCards = () => {
           }}
           aria-label="what is accelerate sl?"
           aria-description="click the card to learn about the accelerate initiative"
+          className="z-20"
         >
           <Card
             className="w-64 h-80 cursor-pointer bg-slate-800 border-slate-500 box-shadow"
@@ -93,6 +94,7 @@ const AboutCards = () => {
           }}
           aria-label="what is global shapers?"
           aria-description="click the card to learn about the worldwide network of young changemakers"
+          className="z-20"
         >
           <Card
             className="w-64 h-80 cursor-pointer bg-slate-800 border-slate-500 box-shadow"
@@ -135,6 +137,7 @@ const AboutCards = () => {
           }}
           aria-label="what is pydata sl?"
           aria-description="click to learn about the pydata program in sri lanka."
+          className="z-20"
         >
           <Card
             className="w-64 h-80 cursor-pointer bg-slate-800 border-slate-500 box-shadow"
