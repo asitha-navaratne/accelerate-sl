@@ -10,16 +10,18 @@ import {
 } from "@/components/ui/card";
 import { motion, useAnimation } from "motion/react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft } from "lucide-react";
-// import Starfield from "react-starfield";
+import { ChevronLeft, Info } from "lucide-react";
 
-import accelerateLogo from "../../assets/logo-accelerate.png";
-import gskLogo from "../../assets/logo-gsk.png";
-import pyDataLogo from "../../assets/logo-pydata.png";
-import features1 from "../../assets/features-1.svg";
-import features2 from "../../assets/features-2.svg";
-import features3 from "../../assets/features-3.svg";
-import features4 from "../../assets/features-4.svg";
+import accelerateLogo from "../../assets/images/logo-accelerate.png";
+import gskLogo from "../../assets/images/logo-gsk.png";
+import pyDataLogo from "../../assets/images/logo-pydata.png";
+import features1 from "../../assets/images/features-1.svg";
+import features2 from "../../assets/images/features-2.svg";
+import features3 from "../../assets/images/features-3.svg";
+import features4 from "../../assets/images/features-4.svg";
+import benefits1 from "../../assets/images/benefits-1.svg";
+import benefits2 from "../../assets/images/benefits-2.svg";
+import benefits3 from "../../assets/images/benefits-3.svg";
 
 import AboutDialog from "@/components/AboutDialog";
 import TypewrittenText from "@/components/TypewrittenText";
@@ -43,7 +45,7 @@ const AboutPage = () => {
   const navigate = useNavigate();
 
   const handleBackButtonClick = function () {
-    navigate("../");
+    navigate("//");
   };
 
   const handleCardClick = function (
@@ -195,61 +197,113 @@ const AboutPage = () => {
             </Card>
           </motion.div>
         </div>
-        <div className="mt-14 md:mt-20 flex flex-col justify-center pb-8 px-5">
+        <div className="mt-14 md:mt-20 flex flex-col items-center px-5">
           <TypewrittenText
             text="Program Features"
             className="text-2xl sub-heading font-mono"
           />
-          <div className="flex flex-col items-center">
-            <div className="md:mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5">
-              <img src={features1} className="w-20 mr-8" />
-              <div className="self-start">
-                <h3 className="text-lg font-thin mb-2 text-yellow-300">
-                  Flexible Online Format
-                </h3>
-                <p>
-                  Participate from anywhere with sessions designed to fit your
-                  schedule, particularly on weekends.
-                </p>
-              </div>
-            </div>
-            <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5">
-              <img src={features2} className="w-20 mr-8" />
-              <div className="self-start">
-                <h3 className="text-lg font-thin mb-2 text-yellow-300">
-                  Affordable Access
-                </h3>
-                <p>
-                  Affordably priced to ensure inclusivity while maintaining
-                  exceptional quality.
-                </p>
-              </div>
-            </div>
-            <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5">
-              <img src={features3} className="w-20 mr-8" />
-              <div className="self-start">
-                <h3 className="text-lg font-thin mb-2 text-yellow-300">
-                  Comprehensive Curriculum:
-                </h3>
-                <p>
-                  Covering high-demand topics such as programming, data
-                  analytics, and tools for digital optimization.
-                </p>
-              </div>
-            </div>
-            <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5">
-              <img src={features4} className="w-20 mr-8" />
-              <div className="self-start">
-                <h3 className="text-lg font-thin mb-2 text-yellow-300">
-                  Expert Panel:
-                </h3>
-                <p>
-                  Sessions conducted by industry professionals and experts from
-                  the Global Shapers community & beyond.
-                </p>
-              </div>
+          <div className="md:mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
+            <img src={features1} className="w-20 mr-8" />
+            <div className="self-start">
+              <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                Flexible Online Format
+              </h3>
+              <p>
+                Participate from anywhere with sessions designed to fit your
+                schedule, particularly on weekends.
+              </p>
             </div>
           </div>
+          <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
+            <img src={features2} className="w-20 mr-8" />
+            <div className="self-start">
+              <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                Affordable Access
+              </h3>
+              <p>
+                Affordably priced to ensure inclusivity while maintaining
+                exceptional quality.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
+            <img src={features3} className="w-20 mr-8" />
+            <div className="self-start">
+              <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                Comprehensive Curriculum:
+              </h3>
+              <p>
+                Covering high-demand topics such as programming, data analytics,
+                and tools for digital optimization.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
+            <img src={features4} className="w-20 mr-8" />
+            <div className="self-start">
+              <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                Expert Panel:
+              </h3>
+              <p>
+                Sessions conducted by industry professionals and experts from
+                the Global Shapers community & beyond.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-14 md:mt-10 flex flex-col items-center px-5">
+          <TypewrittenText
+            text="Benefits"
+            className="text-2xl sub-heading font-mono"
+          />
+          <div className="md:mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
+            <img src={benefits1} className="w-20 mr-8" />
+            <div className="self-start">
+              <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                Enhance Your Skills
+              </h3>
+              <p>
+                Gain skills that can directly improve employability and earning
+                potential.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 md:mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
+            <img src={benefits2} className="w-20 mr-8" />
+            <div className="self-start">
+              <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                Shareable Participation Certificate
+              </h3>
+              <p>
+                Participants will receive a shareable certificate upon
+                completion of the Data Analytics Workshop.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 md:mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
+            <img src={benefits3} className="w-20 mr-8" />
+            <div className="self-start">
+              <h3 className="text-lg font-thin mb-2 text-yellow-300">
+                Join the Community
+              </h3>
+              <p>
+                Join hands with a community of like-minded peers & mentors who
+                will inspire and support your career growth. Automatic
+                subscription to future workshops plus the ability to grow your
+                network.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-16 mb-20 flex justify-center">
+          <Button
+            variant="outline"
+            className="action-button hover:bg-blue-900 hover:text-white"
+            onClick={() => {}}
+          >
+            <Info />
+            Download Prospectus
+          </Button>
         </div>
         <Footer />
       </div>
@@ -258,7 +312,6 @@ const AboutPage = () => {
         handleOpenChange={setIsDialogOpen}
         selection={selectedData}
       />
-      {/* <Starfield /> */}
     </>
   );
 };

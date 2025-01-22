@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import accelerateLogo from "../../assets/logo-accelerate.png";
-import accelerateLogoLow from "../../assets/logo-accelerate-low.png";
+import accelerateLogo from "../../assets/images/logo-accelerate.png";
+import accelerateLogoLow from "../../assets/images/logo-accelerate-low.png";
 
 const HeadingSection = () => {
   const [isLogoLoaded, setIsLogoLoaded] = useState(false);

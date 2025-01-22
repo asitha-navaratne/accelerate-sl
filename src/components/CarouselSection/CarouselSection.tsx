@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { Download } from "lucide-react";
 
-import repoIcon from "../../assets/icon-repo.svg";
+import repoIcon from "../../assets/images/icon-repo.svg";
 
 import TypewrittenText from "../TypewrittenText";
 

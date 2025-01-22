@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ClipboardType, Info } from "lucide-react";
 import { useNavigate } from "react-router";
-// import Starfield from "react-starfield";
 
-import gskLogo from "../../assets/logo-gsk.png";
-import pyDataLogo from "../../assets/logo-pydata.png";
+import gskLogo from "../../assets/images/logo-gsk.png";
+import pyDataLogo from "../../assets/images/logo-pydata.png";
 
 import HeadingSection from "@/components/HeadingSection";
 import FaqSection from "@/components/FaqSection";
@@ -17,6 +16,10 @@ const HomePage = () => {
 
   const handleLearnMoreButtonClick = function () {
     navigate("about");
+  };
+
+  const handleRegisterButtonClick = function () {
+    window.open("https://forms.gle/mXRkKrW4oc8pfJ3i9", "_blank");
   };
 
   return (
@@ -54,6 +57,7 @@ const HomePage = () => {
           <Button
             variant="outline"
             className="action-button hover:bg-blue-900 hover:text-white ml-2 sm:ml-5"
+            onClick={handleRegisterButtonClick}
           >
             <ClipboardType />
             Register Now
@@ -64,7 +68,6 @@ const HomePage = () => {
         <CarouselSection />
         <Footer />
       </div>
-      {/* <Starfield /> */}
     </>
   );
 };
