@@ -38,7 +38,11 @@ const CarouselSection = () => {
                 <CardContent className="p-2 h-full">
                   <div className="flex flex-col h-full">
                     <div className="flex h-1/3 items-center">
-                      <img src={repoIcon} className="w-1/6 mr-3" />
+                      <img
+                        src={repoIcon}
+                        className="w-1/6 mr-3"
+                        aria-hidden="true"
+                      />
                       <h2 className="font-semibold text-blue-400">
                         {repo.name}
                       </h2>
@@ -49,6 +53,7 @@ const CarouselSection = () => {
                         <div className="flex items-center mt-3">
                           <div
                             className={`rounded-full ${repo.colors} w-3 h-3`}
+                            aria-hidden="true"
                           ></div>
                           <p className="ml-2 text-white">{repo.languages}</p>
                         </div>
@@ -61,6 +66,7 @@ const CarouselSection = () => {
                             >
                               <div
                                 className={`rounded-full ${repo.colors[index]} w-3 h-3`}
+                                aria-hidden="true"
                               ></div>
                               <p className="ml-2 text-white">{language}</p>
                             </div>
@@ -79,7 +85,10 @@ const CarouselSection = () => {
                           target="_blank"
                           className="text-sm text-white flex items-center"
                         >
-                          <Download className="mr-2 text-white" />
+                          <Download
+                            className="mr-2 text-white"
+                            aria-hidden="true"
+                          />
                           Download Content
                         </a>
                       )}

@@ -79,6 +79,7 @@ const AboutCards = () => {
                 className="w-44 mt-5"
                 animate={accelerateLogoControls}
                 transition={{ type: "spring", stiffness: 300 }}
+                alt="Accelerate Logo"
               />
             </CardContent>
           </Card>
@@ -122,6 +123,7 @@ const AboutCards = () => {
                 className="w-36 mt-5"
                 animate={gskLogoControls}
                 transition={{ type: "spring", stiffness: 300 }}
+                alt="Global Shapers Kandy Hub logo"
               />
             </CardContent>
           </Card>
@@ -165,6 +167,7 @@ const AboutCards = () => {
                 className="w-52"
                 animate={pyDataLogoControls}
                 transition={{ type: "spring", stiffness: 200 }}
+                alt="PyData Sri Lanka logo"
               />
             </CardContent>
           </Card>

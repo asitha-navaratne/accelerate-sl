@@ -25,7 +25,10 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="w-full h-full flex flex-col items-center overflow-x-hidden">
+      <div
+        className="w-full h-full flex flex-col items-center overflow-x-hidden"
+        aria-label="home"
+      >
         <HeadingSection />
         <div className="w-full flex flex-col items-center">
           <TypewrittenText
@@ -68,18 +71,18 @@ const HomePage = () => {
             className="action-button hover:bg-blue-900 hover:text-white mr-2 sm:mr-5"
             onClick={handleLearnMoreButtonClick}
           >
-            <Info />
+            <Info aria-hidden="true" />
             Learn More
-            <ChevronRight className="hidden sm:block" />
+            <ChevronRight className="hidden sm:block" aria-hidden="true" />
           </Button>
           <Button
             variant="outline"
             className="action-button hover:bg-blue-900 hover:text-white ml-2 sm:ml-5"
             onClick={handleRegisterButtonClick}
           >
-            <ClipboardType />
+            <ClipboardType aria-hidden="true" />
             Register Now
-            <ChevronRight className="hidden sm:block" />
+            <ChevronRight className="hidden sm:block" aria-hidden="true" />
           </Button>
         </div>
         <FaqSection />

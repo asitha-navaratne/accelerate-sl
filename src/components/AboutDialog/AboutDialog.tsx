@@ -50,8 +50,9 @@ const AboutDialog: FC<AboutDialogProps> = (props) => {
                     "_blank"
                   )
                 }
+                aria-label="link to Home page"
               >
-                <Home className="text-white" aria-label="home" />
+                <Home className="text-white" aria-hidden="true" />
                 {AboutData[props.selection].links?.home?.name}
               </Button>
             )}
@@ -63,8 +64,9 @@ const AboutDialog: FC<AboutDialogProps> = (props) => {
                     "_blank"
                   )
                 }
+                aria-label="link to Instagram page"
               >
-                <Instagram className="text-white" aria-label="instagram" />
+                <Instagram className="text-white" aria-hidden="true" />
                 {AboutData[props.selection].links?.instagram?.name}
               </Button>
             )}
@@ -76,8 +78,9 @@ const AboutDialog: FC<AboutDialogProps> = (props) => {
                     "_blank"
                   )
                 }
+                aria-label="link to YouTube page"
               >
-                <Youtube className="text-white" aria-label="youtube" />
+                <Youtube className="text-white" aria-hidden="true" />
                 {AboutData[props.selection].links?.youtube?.name}
               </Button>
             )}
@@ -89,8 +92,9 @@ const AboutDialog: FC<AboutDialogProps> = (props) => {
                     "_blank"
                   )
                 }
+                aria-label="link to LinkedIn page"
               >
-                <Linkedin className="text-white" aria-label="linkedin" />
+                <Linkedin className="text-white" aria-hidden="true" />
                 {AboutData[props.selection].links?.linkedin?.name}
               </Button>
             )}
@@ -102,8 +106,9 @@ const AboutDialog: FC<AboutDialogProps> = (props) => {
                     "_blank"
                   )
                 }
+                aria-label="link to Meetup page"
               >
-                <Presentation className="text-white" aria-label="meetup" />
+                <Presentation className="text-white" aria-hidden="true" />
                 {AboutData[props.selection].links?.meetup?.name}
               </Button>
             )}
@@ -111,7 +116,7 @@ const AboutDialog: FC<AboutDialogProps> = (props) => {
         </div>
         <DialogFooter className="mt-5">
           <DialogClose asChild>
-            <Button type="button" variant="secondary">
+            <Button type="button" variant="secondary" aria-label="close modal">
               Okay
             </Button>
           </DialogClose>

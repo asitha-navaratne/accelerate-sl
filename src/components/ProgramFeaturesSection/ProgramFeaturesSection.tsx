@@ -13,7 +13,7 @@ const ProgramFeaturesSection = () => {
         className="text-2xl sub-heading font-mono"
       />
       <div className="md:mt-2 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
-        <img src={features1} className="w-20 mr-8" />
+        <img src={features1} className="w-20 mr-8" aria-hidden="true" />
         <div className="self-start">
           <h3 className="text-lg font-thin mb-2 text-yellow-300">
             Flexible Online Format
@@ -25,7 +25,7 @@ const ProgramFeaturesSection = () => {
         </div>
       </div>
       <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
-        <img src={features2} className="w-20 mr-8" />
+        <img src={features2} className="w-20 mr-8" aria-hidden="true" />
         <div className="self-start">
           <h3 className="text-lg font-thin mb-2 text-yellow-300">
             Affordable Access
@@ -37,7 +37,7 @@ const ProgramFeaturesSection = () => {
         </div>
       </div>
       <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
-        <img src={features3} className="w-20 mr-8" />
+        <img src={features3} className="w-20 mr-8" aria-hidden="true" />
         <div className="self-start">
           <h3 className="text-lg font-thin mb-2 text-yellow-300">
             Comprehensive Curriculum:
@@ -49,7 +49,7 @@ const ProgramFeaturesSection = () => {
         </div>
       </div>
       <div className="mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
-        <img src={features4} className="w-20 mr-8" />
+        <img src={features4} className="w-20 mr-8" aria-hidden="true" />
         <div className="self-start">
           <h3 className="text-lg font-thin mb-2 text-yellow-300">
             Expert Panel:

@@ -12,7 +12,7 @@ const BenefitsSection = () => {
         className="text-2xl sub-heading font-mono"
       />
       <div className="md:mt-2 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
-        <img src={benefits1} className="w-20 mr-8" />
+        <img src={benefits1} className="w-20 mr-8" aria-hidden="true" />
         <div className="self-start">
           <h3 className="text-lg font-thin mb-2 text-yellow-300">
             Enhance Your Skills
@@ -24,7 +24,7 @@ const BenefitsSection = () => {
         </div>
       </div>
       <div className="mt-6 md:mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
-        <img src={benefits2} className="w-20 mr-8" />
+        <img src={benefits2} className="w-20 mr-8" aria-hidden="true" />
         <div className="self-start">
           <h3 className="text-lg font-thin mb-2 text-yellow-300">
             Shareable Participation Certificate
@@ -36,7 +36,7 @@ const BenefitsSection = () => {
         </div>
       </div>
       <div className="mt-6 md:mt-6 md:w-[50%] border-purple-400 border-2 flex items-center rounded-3xl p-5 box-shadow">
-        <img src={benefits3} className="w-20 mr-8" />
+        <img src={benefits3} className="w-20 mr-8" aria-hidden="true" />
         <div className="self-start">
           <h3 className="text-lg font-thin mb-2 text-yellow-300">
             Join the Community

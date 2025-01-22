@@ -24,10 +24,10 @@ const AboutPage = () => {
 
   return (
     <>
-      <div>
+      <div aria-label="about page">
         <div className="flex justify-between mt-3 items-center px-5">
-          <Button onClick={handleBackButtonClick} aria-label="back button">
-            <ChevronLeft />
+          <Button onClick={handleBackButtonClick}>
+            <ChevronLeft aria-hidden="true" />
             Back
           </Button>
           <img
@@ -43,7 +43,7 @@ const AboutPage = () => {
             className="action-button hover:bg-blue-900 hover:text-white"
             onClick={handleDownloadProspectusButtonClick}
           >
-            <Info />
+            <Info aria-hidden="true" />
             View Brochure
           </Button>
         </div>
