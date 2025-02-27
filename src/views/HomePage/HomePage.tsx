@@ -61,9 +61,9 @@ const HomePage = () => {
             Course Registration Only LKR 2500!
           </motion.p>
           <p className="mt-4 font-light text-lg md:text-xl">
-            Registrations open from 23rd January to 15th February.
+            Registration deadline extended to 28th of February.
           </p>
-          <p className="mt-4 font-light">Courses begin on 23rd February.</p>
+          <p className="mt-4 font-light">Second session on 1st March.</p>
         </div>
         <div className="w-full flex justify-center mt-10 mb-10 mx-auto">
           <Button
